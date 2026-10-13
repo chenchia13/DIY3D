@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請票選最佳網站</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b3a2e;
+    --forest:#3f6b4a;
+    --moss:#5f8a5f;
+    --cream:#f5f2e9;
+    --paper:#fbf9f3;
+    --accent:#c98a3b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Noto Sans TC',sans-serif;color:var(--ink);min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(143,174,143,.28), transparent 60%),
+      radial-gradient(700px 400px at -10% 110%, rgba(95,138,95,.2), transparent 60%),
+      var(--cream);
+    padding:40px 24px;text-align:center;-webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.04;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .box{position:relative;z-index:2;max-width:760px;width:100%;}
+  .kicker{font-size:12.5px;letter-spacing:.34em;color:var(--moss);text-transform:uppercase;margin-bottom:22px;}
+  h1{font-family:'Noto Serif TC',serif;font-weight:400;font-size:clamp(34px,6.5vw,58px);line-height:1.2;}
+  h1 b{font-weight:700;color:var(--forest);}
+  .sub{margin-top:18px;font-size:16px;color:#54654f;font-weight:300;}
+  .cards{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  a.card{
+    text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid rgba(63,107,74,.18);
+    border-radius:16px;padding:30px 20px;transition:transform .35s ease, box-shadow .35s ease, border-color .35s;
+    display:flex;flex-direction:column;align-items:center;gap:8px;
+  }
+  a.card:hover{transform:translateY(-8px);box-shadow:0 26px 46px -28px rgba(43,58,46,.45);border-color:var(--forest);}
+  a.card .no{font-size:11.5px;letter-spacing:.2em;color:var(--moss);text-transform:uppercase;}
+  a.card .name{font-family:'Noto Serif TC',serif;font-size:30px;font-weight:500;}
+  a.card .tip{font-size:12.5px;color:#6b7a66;font-weight:300;}
+  a.card .go{margin-top:8px;font-size:14px;color:var(--forest);}
+  .foot{margin-top:40px;font-size:12px;color:#93a08c;letter-spacing:.06em;}
+  @media(max-width:560px){.cards{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="kicker">Vote · Choose the best</div>
+    <h1>請<b>票選</b>最佳網站</h1>
+    <p class="sub">三款風格，點進去看看，選出你最喜歡的那一個。</p>
+    <div class="cards">
+      <a class="card" href="印想DIY_01_植森.html">
+        <span class="no">01</span>
+        <span class="name">植森</span>
+        <span class="tip">有機自然風</span>
+        <span class="go">前往 →</span>
+      </a>
+      <a class="card" href="印想DIY_02_印想.html">
+        <span class="no">02</span>
+        <span class="name">印想</span>
+        <span class="tip">極簡編輯風</span>
+        <span class="go">前往 →</span>
+      </a>
+      <a class="card" href="印想DIY_03_造局.html">
+        <span class="no">03</span>
+        <span class="name">造局</span>
+        <span class="tip">手作工務圖面風</span>
+        <span class="go">前往 →</span>
+      </a>
+    </div>
+    <div class="foot">印想 DIY · 三個風格範例</div>
+  </div>
+</body>
+</html>
