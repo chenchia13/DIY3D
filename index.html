@@ -49,11 +49,11 @@
   .m-br::after{left:auto;right:0;}
 
   /* top tape label */
-  .top{padding-top:34px;}
+  .top{padding-top:16px;}
   .topbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
   .stamp{
     display:inline-flex;align-items:center;gap:10px;background:var(--green);color:var(--paper);
-    font-family:'ZCOOL XiaoWei',serif;font-size:28px;padding:8px 12px;border-radius:5px;
+    font-family:'ZCOOL XiaoWei',serif;font-size:28px;padding:3px 14px;border-radius:5px;
     box-shadow:5px 5px 0 rgba(51,64,47,.18);letter-spacing:.04em;
   }
   .stamp .dot{width:14px;height:14px;border-radius:50%;background:var(--rust);}
@@ -65,7 +65,7 @@
   .nav a:hover{background:var(--green);color:var(--paper);border-color:var(--green);transform:translateY(-2px) rotate(-1deg);}
 
   /* hero */
-  .hero{padding:70px 0 60px;}
+  .hero{padding:50px 0 30px;}
   .hero .meta{font-family:'Caveat',cursive;font-size:26px;color:var(--teal);margin-bottom:8px;}
   h1{font-family:'ZCOOL XiaoWei',serif;font-size:clamp(40px,8.5vw,104px);line-height:.95;letter-spacing:.02em;}
   h1 .hl{color:var(--green);position:relative;display:inline-block;}
@@ -118,7 +118,7 @@
     content:"";position:absolute;inset:0;opacity:.15;
     background-image:linear-gradient(90deg,var(--paper) 1px,transparent 1px);background-size:18px 100%;
   }
-  .sc-in{padding:54px 46px;position:relative;z-index:2;display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:center;}
+  .sc-in{padding:45px 46px;position:relative;z-index:2;display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:center;}
   .showcase h2{font-family:'ZCOOL XiaoWei',serif;font-size:clamp(30px,5vw,48px);line-height:1.2;}
   .showcase h2 .y{color:var(--rust);}
   .showcase p{margin-top:18px;font-size:15px;color:rgba(243,234,214,.82);max-width:440px;font-weight:300;}
@@ -134,12 +134,12 @@
   .ticket::after{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;background:var(--green);border-radius:3px;}
 
   /* curiosity footer quote */
-  .curiosity{padding:70px 0 40px;text-align:center;}
-  .curiosity .q{font-family:'Caveat',cursive;font-size:clamp(30px,6vw,52px);color:var(--green);line-height:1.4;}
+  .curiosity{padding:40px 0 20px;text-align:center;}
+  .curiosity .q{font-family:'Caveat',cursive;font-size:clamp(22px,3vw,52px);color:var(--green);line-height:1.4;}
   .curiosity .q span{color:var(--rust);}
   .curiosity .en{margin-top:16px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8a9080;}
 
-  footer{border-top:1.5px dashed var(--line);margin-top:30px;padding:40px 0 50px;}
+  footer{border-top:1.5px dashed var(--line);margin-top:30px;padding:30px 0 20px;}
   .f-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center;}
   .f-brand{font-family:'ZCOOL XiaoWei',serif;font-size:24px;}
   .f-links{display:flex;gap:18px;flex-wrap:wrap;}
@@ -149,7 +149,7 @@
 
   @media(max-width:820px){
     .tools{grid-template-columns:1fr;}
-    .sc-in{grid-template-columns:1fr;padding:40px 26px;}
+    .sc-in{grid-template-columns:1fr;padding:36px 26px;}
     .mark{display:none;}
   }
 </style>
@@ -165,9 +165,9 @@
 </div>
 
 <header class="hero container">
-  <h1>把舊物，<br>重新<span class="hl">印</span>出生命。</h1>
-  <p class="sub">一層層印、一道道刻，在天空看一片片風景 —好奇心是探索這世界的燃料。<br>喜歡<b>親手</b>、喜歡<b>修復&nbsp;</b>—也喜歡把值得珍惜的東西留下。</p>
-  <div class="note">P.S. 壞掉的東西，<span>別急著丟</span> ♻</div>
+  <h1>讓眼界<span class="hl">翱翔</span>,
+    任創意<span class="hl">發芽</span></h1>
+  <p class="sub">一層層印、一道道刻，在天空看一片片風景 --用赤子心探索這世界。<br>喜歡親手<b>創作</b>、喜歡<b>修復&nbsp;</b> --也喜歡把值得珍惜的東西留下。</p>
 </header>
 
 
@@ -189,16 +189,13 @@
 </section>
 
 <section class="curiosity container">
-  <div class="q">保持 <span>好奇</span>、探索<br>創造我們的世界。</div>
+  <div class="q">好奇‧手作‧探索‧創造我們的世界</div>
   <div class="en">Stay curious · Make it · Mend it · Share it</div>
 </section>
 
 <footer>
   <div class="container f-in">
     <div class="f-brand">印想 ·&nbsp;DIY</div>
-    <div class="f-links">
-      <a href="https://example.com/services" target="_blank" rel="noopener"><span style="color: rgb(138, 144, 128); font-family: Caveat, cursive; font-size: 22px;">— 手工打造 · 惜物 · 環保 —</span></a>
-    </div>
   </div>
 </footer>
 
