@@ -92,12 +92,23 @@
   }
   .row:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:5px 5px 0 rgba(51,64,47,.12);}
   .row .name{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:400;}
-  .row .desc{font-size:14.5px;color:#66705f;line-height:1.9;}
+  .row .desc{font-size:14.5px;color:#66705f;line-height:1.5;}
+  .service-intro{font-size:15px;color:var(--ink);line-height:1.2;}
+  .service-content{display:grid;gap:8px;width:100%;}
+  .service-group{display:grid;gap:8px;}
+  .service-group h3{font-size:18px;font-weight:500;color:var(--green-deep);}
+  .service-list{list-style:none;display:grid;gap:0px;}
+  .service-list li{position:relative;padding-left:1.2em;}
+  .service-list li::before{content:"";position:absolute;left:0;top:.82em;width:6px;height:6px;border-radius:50%;background:var(--rust);}
+  .service-materials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;}
+  .laser-details{list-style:none;display:grid;gap:10px;}
+  .laser-details li{position:relative;padding-left:1.2em;}
+  .laser-details li::before{content:"";position:absolute;left:0;top:.82em;width:6px;height:6px;border-radius:50%;background:var(--rust);}
 
   /* stats / big statement */
   .big{background:var(--green);color:#f4f3ee;padding:96px 0;}
   .big .container{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center;}
-  .big h2{font-family:'Noto Serif TC',serif;font-weight:200;font-size:clamp(38px,6vw,72px);line-height:1.12;letter-spacing:.01em;}
+  .big h2{font-family:'Noto Serif TC',serif;font-weight:300;font-size:clamp(38px,6vw,72px);line-height:1.12;letter-spacing:.01em;}
   .big .side .mono{color:rgba(244,243,238,.6);}
   .big .side p{margin-top:22px;font-size:15px;line-height:1.9;color:rgba(244,243,238,.82);max-width:320px;}
   .big a{display:inline-block;margin-top:30px;color:#f4f3ee;text-decoration:none;font-size:14px;letter-spacing:.06em;border-bottom:1px solid rgba(244,243,238,.5);padding-bottom:6px;transition:border-color .3s;}
@@ -126,6 +137,7 @@
   @media(max-width:600px){
     .list{grid-template-columns:1fr;gap:16px;}
     .row{padding:24px;}
+    .service-materials{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -136,9 +148,9 @@
     <a class="stamp" href="./index.html"><span class="dot"></span>印想·DIY</a>
     <div class="nav">
        <span class="current" aria-current="page">服務項目</span>
-      <a href="./成果展示.html" target="_blank" rel="noopener">成果展示</a>
-      <a href="https://example.com/scout" target="_blank" rel="noopener">科園童軍團</a>
-      <a href="./聯絡我們.html" target="_blank" rel="noopener">聯絡我們</a>
+      <a href="./成果展示.html">成果展示</a>
+      <a href="https://example.com/scout">科園童軍團</a>
+      <a href="ContactUs.html">聯絡我們</a>
     </div>
   </div>
 </div>
@@ -153,11 +165,49 @@
     <div class="list">
       <article class="row">
         <h2 class="name">3D 列印</h2>
-        <div class="desc">FDM可列印材料：<br>有彈性--TPU<br>短期實驗用環保材料--PLA<br>車用耐高溫-- ABS<br>航空模型輕量化 -- ePLA<br>戶外、風吹日曬耐候性、高強度 -- ASA</div>
+        <div class="desc service-content">
+          <p class="service-intro">從構想討論、3D 繪圖，到成品印製，從無到有的構想實現。</p>
+          <section class="service-group">
+            <h3>委託列印</h3>
+            <p>客戶提供既有 3D 圖檔，指定列印材料。</p>
+            <h3>收費標準</h3>
+            <ul class="service-list">
+              <li>基本處理費 100 元（老客戶免收）＋材料費</li>
+              <li>一般材料（PLA）每公克 3 元。</li>
+              <li>其他材料費用另計，可依照圖檔提供報價。</li>
+            </ul>
+          </section>
+          <section class="service-group">
+            <h3>客製化設計</h3>
+            <p>工程零部件的構想討論、3D 建模繪圖，到成品印製，從無到有的構想實現。</p>
+            <h3>收費方式</h3>
+            <ul class="service-list">
+              <li>構想討論、前期評估後，提供報價。同意製作後，訂金 100 元（認識的朋友免收）。</li>
+              <li>繪製完成後提供截圖，若不滿意可隨時終止，不收尾款也不退訂金。</li>
+              <li>若需提供原始繪圖檔或 STL 列印檔，或需列印時才收尾款。</li>
+            </ul>
+          </section>
+          <section class="service-group">
+            <p>FDM 堆疊式 3D 列印，暫不提供光固化列印。</p>
+            <h3>可選材料</h3>
+            <ul class="service-list service-materials">
+              <li>有彈性－TPU</li>
+              <li>短期實驗用環保材料－PLA</li>
+              <li>高強度材料－PETG</li>
+              <li>車用耐高溫－ABS</li>
+              <li>航空模型輕量化－ePLA</li>
+              <li>戶外、風吹日曬耐候性、高強度－ASA</li>
+            </ul>
+          </section>
+        </div>
       </article>
       <article class="row">
         <h2 class="name">雷射雕刻</h2>
-        <div class="desc">皮革、石頭、玻璃表面<br>5mm厚度以下木板切割<br>可使用各種顏色材料「浮雕」</div>
+        <ul class="desc laser-details">
+          <li>皮革、石頭、玻璃等非金屬類物品表面之雷射雕刻</li>
+          <li>5mm 厚度以下木板雷射切割</li>
+          <li>可使用各種顏色材料，以雷射產生厚度約 1～2mm 的「浮雕」，將單色圖案黏著浮現於物體表面</li>
+        </ul>
       </article>
       <article class="row">
         <h2 class="name">空拍紀錄、體驗</h2>
@@ -205,4 +255,3 @@
 
 </body>
 </html>
-
