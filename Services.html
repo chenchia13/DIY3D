@@ -91,12 +91,14 @@
     transition:transform .3s,box-shadow .3s,border-color .3s;
   }
   .row:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:5px 5px 0 rgba(51,64,47,.12);}
-  .row .name{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:400;}
+  .row .name{font-family:'Noto Serif TC',;font-size:28px;font-weight:500;}
   .row .desc{font-size:14.5px;color:#66705f;line-height:1.5;}
   .service-intro{font-size:15px;color:var(--ink);line-height:1.2;}
   .service-content{display:grid;gap:8px;width:100%;}
   .service-group{display:grid;gap:8px;}
-  .service-group h3{font-size:18px;font-weight:500;color:var(--green-deep);}
+  .service-group h3{font-size:19px;font-weight:500;color:var(--green-deep);}
+  .service-subgroup{display:grid;gap:4px;margin-left:12px;padding-left:12px;border-left:1px solid var(--line);}
+  .service-subgroup h4{font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:500;color:#7a806f;letter-spacing:0.04em;}
   .service-list{list-style:none;display:grid;gap:0px;}
   .service-list li{position:relative;padding-left:1.2em;}
   .service-list li::before{content:"";position:absolute;left:0;top:.82em;width:6px;height:6px;border-radius:50%;background:var(--rust);}
@@ -170,26 +172,30 @@
           <section class="service-group">
             <h3>委託列印</h3>
             <p>客戶提供既有 3D 圖檔，指定列印材料。</p>
-            <h3>收費標準</h3>
-            <ul class="service-list">
-              <li>基本處理費 100 元（老客戶免收）＋材料費</li>
-              <li>一般材料（PLA）每公克 3 元。</li>
-              <li>其他材料費用另計，可依照圖檔提供報價。</li>
-            </ul>
+            <div class="service-subgroup">
+              <h4>收費標準</h4>
+              <ul class="service-list">
+                <li>基本處理費 100 元（老客戶免收）＋材料費</li>
+                <li>一般材料（PLA）每公克 3 元。</li>
+                <li>其他材料費用另計，可依照圖檔提供報價。</li>
+              </ul>
+            </div>
           </section>
           <section class="service-group">
             <h3>客製化設計</h3>
             <p>工程零部件的構想討論、3D 建模繪圖，到成品印製，從無到有的構想實現。</p>
-            <h3>收費方式</h3>
-            <ul class="service-list">
-              <li>構想討論、前期評估後，提供報價。同意製作後，訂金 100 元（認識的朋友免收）。</li>
-              <li>繪製完成後提供截圖，若不滿意可隨時終止，不收尾款也不退訂金。</li>
-              <li>若需提供原始繪圖檔或 STL 列印檔，或需列印時才收尾款。</li>
-            </ul>
+            <div class="service-subgroup">
+              <h4>收費方式</h4>
+              <ul class="service-list">
+                <li>構想討論、前期評估後，提供報價。同意製作後，訂金 100 元（認識的朋友免收）。</li>
+                <li>繪製完成後提供截圖，若不滿意可隨時終止，不收尾款也不退訂金。</li>
+                <li>若需提供原始繪圖檔或 STL 列印檔，或需列印時才收尾款。</li>
+              </ul>
+            </div>
           </section>
           <section class="service-group">
             <p>FDM 堆疊式 3D 列印，暫不提供光固化列印。</p>
-            <h3>可選材料</h3>
+            <h3>列印材料</h3>
             <ul class="service-list service-materials">
               <li>有彈性－TPU</li>
               <li>短期實驗用環保材料－PLA</li>
@@ -255,3 +261,4 @@
 
 </body>
 </html>
+
